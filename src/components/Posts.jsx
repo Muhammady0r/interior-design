@@ -86,14 +86,14 @@ function Posts() {
               <br />
               <form
                 onSubmit={handleNewPoster}
-                className="p-5 gap-5 flex flex-col border-2 rounded-3xl "
+                className="p-5 gap-5 flex flex-col border-2 rounded-3xl border-orange-500"
               >
-                <div className="poster  flex flex-col gap-2">
+                <div className="poster  flex flex-col gap-2 ">
                   <p className="ml-1 text-left">Poster</p>
                   <input
-                    className="p-2 border-1 rounded-3xl w-full"
+                    className="p-2 border-2 rounded-3xl w-full bg-inherit border-orange-500"
                     type="text"
-                    placeholder="text"
+                    placeholder="img"
                     onChange={(e) => {
                       setPoster(e.target.value);
                     }}
@@ -102,7 +102,7 @@ function Posts() {
                 <div className="header">
                   <p className="ml-1 text-left">Header</p>
                   <input
-                    className="p-2 border-1 rounded-3xl w-full"
+                    className="p-2 border-2 rounded-3xl w-full bg-inherit border-orange-500"
                     type="text"
                     placeholder="text"
                     onChange={(e) => {
@@ -113,7 +113,7 @@ function Posts() {
                 <div className="description">
                   <p className="ml-1 text-left">Description</p>
                   <input
-                    className="p-2 border-1 rounded-3xl w-full"
+                    className="p-2 border-2 rounded-3xl w-full bg-inherit border-orange-500"
                     type="text"
                     placeholder="text"
                     onChange={(e) => {
@@ -124,9 +124,9 @@ function Posts() {
                 <div className="link">
                   <p className="ml-1 text-left">Link</p>
                   <input
-                    className="p-2 border-1 rounded-3xl w-full"
+                    className="p-2 border-2 rounded-3xl w-full bg-inherit border-orange-500"
                     type="text"
-                    placeholder="text"
+                    placeholder="URL"
                     onChange={(e) => {
                       setLinkp(e.target.value);
                     }}
@@ -141,7 +141,7 @@ function Posts() {
           return (
             <div
               key={i}
-              className="nav flex gap-2 p-3 border-2 rounded-3xl justify-between"
+              className="nav flex gap-2 p-3 border-2 rounded-3xl justify-between border-orange-500"
             >
               <p>{res.poster}</p>
               <p>{res.header}</p>
@@ -173,14 +173,15 @@ function Posts() {
                     onSubmit={(e) => {
                       handleEditPoster(e, res.id);
                     }}
-                    className="p-5 gap-5 flex flex-col border-2 rounded-3xl "
+                    className="p-5 gap-5 flex flex-col border-2 rounded-3xl  border-orange-500 "
                   >
                     <div className="poster  flex flex-col gap-2">
                       <p className="ml-1 text-left">Poster</p>
                       <input
-                        className="p-2 border-1 rounded-3xl w-full"
+                        className="p-2 border-2 rounded-3xl w-full bg-inherit border-orange-500"
+                        defaultValue={res.poster}
                         type="text"
-                        placeholder="text"
+                        placeholder="img"
                         onChange={(e) => {
                           setPoster(e.target.value);
                         }}
@@ -189,7 +190,8 @@ function Posts() {
                     <div className="header">
                       <p className="ml-1 text-left">Header</p>
                       <input
-                        className="p-2 border-1 rounded-3xl w-full"
+                        className="p-2 border-2 rounded-3xl w-full bg-inherit border-orange-500"
+                        defaultValue={res.header}
                         type="text"
                         placeholder="text"
                         onChange={(e) => {
@@ -200,7 +202,8 @@ function Posts() {
                     <div className="description">
                       <p className="ml-1 text-left">Description</p>
                       <input
-                        className="p-2 border-1 rounded-3xl w-full"
+                        className="p-2 border-2 rounded-3xl w-full bg-inherit border-orange-500"
+                        defaultValue={res.description}
                         type="text"
                         placeholder="text"
                         onChange={(e) => {
@@ -211,9 +214,10 @@ function Posts() {
                     <div className="link">
                       <p className="ml-1 text-left">Link</p>
                       <input
-                        className="p-2 border-1 rounded-3xl w-full"
+                        className="p-2 border-2 rounded-3xl w-full bg-inherit border-orange-500"
+                        defaultValue={res.link}
                         type="text"
-                        placeholder="text"
+                        placeholder="URL"
                         onChange={(e) => {
                           setLinkp(e.target.value);
                         }}

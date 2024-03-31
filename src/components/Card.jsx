@@ -81,12 +81,12 @@ function Card() {
             </DialogHeader>
             <form
               onSubmit={handleNewNavLink}
-              className="p-5 gap-5 flex flex-col border-2 rounded-3xl "
+              className="p-5 gap-5 flex flex-col border-2 rounded-3xl border-orange-500 "
             >
               <div className="name flex flex-col gap-2">
                 <p className="ml-1 text-left">Text</p>
                 <input
-                  className="p-2 border-1 rounded-3xl w-full"
+                  className="p-2 border-2 rounded-3xl w-full bg-inherit border-orange-500"
                   type="text"
                   placeholder="text"
                   onChange={(e) => {
@@ -97,7 +97,7 @@ function Card() {
               <div className="link flex flex-col gap-2">
                 <p className="ml-1 text-left">Link</p>
                 <input
-                  className="p-2 border-1 rounded-3xl"
+                  className="p-2 border-2 rounded-3xl bg-inherit border-orange-500"
                   type="text"
                   placeholder="link"
                   onChange={(e) => {
@@ -114,7 +114,7 @@ function Card() {
           return (
             <div
               key={i}
-              className="nav flex gap-2 p-3 border-2 rounded-3xl justify-between  "
+              className="nav flex gap-2 p-3 border-2 rounded-3xl justify-between border-orange-500 "
             >
               <p className="">{res.text}</p>
               <p>{res.link}</p>
@@ -142,12 +142,12 @@ function Card() {
                     onSubmit={(e) => {
                       handleEditNavLink(e, res.id);
                     }}
-                    className="p-5 gap-5 flex flex-col border-2 rounded-3xl "
+                    className="p-5 gap-5 flex flex-col border-2 rounded-3xl  border-orange-500"
                   >
                     <div className="name flex flex-col gap-2">
                       <p className="ml-1 text-left">Text</p>
                       <input
-                        className="p-2 border-1 rounded-3xl w-full"
+                        className="p-2 border-2 rounded-3xl w-full bg-inherit border-orange-500 text-white"
                         defaultValue={res.text}
                         type="text"
                         placeholder="text"
@@ -159,7 +159,7 @@ function Card() {
                     <div className="link flex flex-col gap-2">
                       <p className="ml-1 text-left">Link</p>
                       <input
-                        className="p-2 border-1 rounded-3xl"
+                        className="p-2 border-2 rounded-3xl w-full bg-inherit border-orange-500 text-white"
                         defaultValue={res.link}
                         type="text"
                         placeholder="link"

@@ -46,7 +46,7 @@ function Users() {
           return (
             <div
               key={i}
-              className="user  flex gap-2 p-3 border-2 rounded-3xl justify-between"
+              className="user  flex gap-2 p-3 border-2 rounded-3xl justify-between border-orange-500"
             >
               <p>{res.name}</p>
               <p>{res.email}</p>

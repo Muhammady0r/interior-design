@@ -18,7 +18,10 @@ function App() {
       <br />
       <br />
       <Card />
+      <hr className="border-white bg-white" />
       <Posts />
+      <hr className="border-white bg-white" />
+
       <Users />
     </div>
   );
