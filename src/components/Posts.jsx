@@ -26,7 +26,7 @@ function Posts() {
       );
     },
     {
-      refetchInterval: 500,
+      refetchInterval: 2500,
     }
   );
 

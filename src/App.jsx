@@ -1,19 +1,12 @@
 import React, { useState, useEffect } from "react";
-import axios from "axios";
 import "./App.css";
-import { useQuery } from "react-query";
-
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
-} from "@/components/ui/dialog";
+// import axios from "axios";
+// import { useQuery } from "react-query";
+// import Container from "react-bootstrap/Container";
 
 import Posts from "./components/Posts";
 import Card from "./components/Card";
+import Users from "./components/Users";
 
 function App() {
   return (
@@ -26,6 +19,7 @@ function App() {
       <br />
       <Card />
       <Posts />
+      <Users />
     </div>
   );
 }
