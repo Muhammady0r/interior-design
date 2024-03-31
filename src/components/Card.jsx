@@ -24,7 +24,7 @@ function Card() {
       );
     },
     {
-      refetchInterval: 500,
+      refetchInterval: 2500,
     }
   );
 
