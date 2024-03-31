@@ -24,6 +24,7 @@ import {
 } from "@/components/ui/dropdown-menu";
 
 import { Input } from "@/components/ui/input";
+import Loading from "./Loading";
 
 const Header = () => {
   const { data: navLinks, isLoading: navLoading } = useQuery(
@@ -34,17 +35,11 @@ const Header = () => {
       );
     },
     {
-      refetchIntervalInBackground: 5000,
+      refetchIntervalInBackground: 10000,
     }
   );
 
-  if (navLoading) {
-    return (
-      <>
-        <l-ring size="60" color="coral"></l-ring>
-      </>
-    );
-  }
+  if (navLoading) return <Loading />;
 
   return (
     <div className="flex justify-between items-center container">

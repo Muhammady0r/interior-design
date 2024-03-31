@@ -8,14 +8,8 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+
 import { getImages } from "@/App";
 
 const cards = [
@@ -42,7 +36,7 @@ const HowWork = () => {
     <div className="flex flex-col container">
       <h1 className="playd-700 text-6xl max-sm:text-4xl">How We Work</h1>
       <p className="flex gap-2 items-center poppins-500 text-xl text-secondary">
-        <div className="h-1 w-10 bg-accent rounded-lg"></div> OUR WORKFLOW
+        <span className="h-1 w-10 bg-accent rounded-lg"></span>OUR WORKFLOW
       </p>
       <Carousel className={"mt-10"}>
         <CarouselContent className={"gap-8"}>

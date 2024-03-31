@@ -1,9 +1,15 @@
 import "./App.css";
 import Header from "./components/Header";
 import "ldrs/ring";
+import "ldrs/helix";
 import Showcase from "./components/Showcase";
 import HowWork from "./components/HowWork";
 import Previews from "./components/Previews";
+import Projects from "./components/Projects";
+import Work from "./components/Work";
+
+import { Toaster } from "@/components/ui/sonner";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -14,6 +20,16 @@ function App() {
       <br />
       <br />
       <Previews />
+      <br />
+      <br />
+      <Projects />
+      <br />
+      <br />
+      <br />
+      <br />
+      <Work />
+      <Footer />
+      <Toaster />
     </>
   );
 }
