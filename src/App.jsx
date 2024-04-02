@@ -3,7 +3,7 @@ import "./App.css";
 import Posts from "./components/Posts";
 import Card from "./components/Card";
 import Users from "./components/Users";
-import { Link, Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import Homepage from "./components/Homepage";
 import Notfoundpage from "./components/Notfoundpage";
 import Header from "./components/Header";

@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const Header = () => {
   return (
@@ -8,31 +8,32 @@ const Header = () => {
         <h1>Pages</h1>
         <hr className="border-white bg-white" />
         <div className="links flex flex-col gap-3">
-          <Link
+          <NavLink
             to="/"
-            className="hover:bg-white hover:text-orange-500 border-1 rounded-3xl p-1"
+            className="link hover:border-orange-500 border-1 rounded-3xl p-1"
           >
             Home
-          </Link>
-          <Link
+          </NavLink>
+          <NavLink
             to="/card"
-            className="hover:bg-white hover:text-orange-500 border-1 rounded-3xl p-1"
+            className="link hover:border-orange-500 border-1 rounded-3xl p-1"
           >
             Cards
-          </Link>
-          <Link
+          </NavLink>
+          <NavLink
             to="/posts"
-            className="hover:bg-white hover:text-orange-500 border-1 rounded-3xl p-1"
+            className="link hover:border-orange-500 border-1 rounded-3xl p-1"
           >
             Posts
-          </Link>
-          <Link
+          </NavLink>
+          <NavLink
             to="/users"
-            className="hover:bg-white hover:text-orange-500 border-1 rounded-3xl p-1"
+            className="link hover:border-orange-500А border-1 rounded-3xl p-1"
           >
             Users
-          </Link>
+          </NavLink>
         </div>
+        <button className="changeback">Mode</button>
       </header>
     </>
   );
