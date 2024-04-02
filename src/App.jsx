@@ -7,10 +7,12 @@ import { Route, Routes } from "react-router-dom";
 import Homepage from "./components/Homepage";
 import Notfoundpage from "./components/Notfoundpage";
 import Header from "./components/Header";
+import DarkMode from "./components/DarkMode";
 
 function App() {
   return (
-    <div className="flex gap-3 p-2">
+    <div className="body flex gap-3 p-2">
+      {/* <DarkMode /> */}
       <Header />
       <Routes>
         <Route path="/" element={<Homepage />} />

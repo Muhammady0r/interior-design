@@ -4,8 +4,11 @@
 
 @layer base {
   :root {
-    --background: 240 10% 3.9%;
-    --foreground: 0 0% 98%;
+    --body_background: white;
+    --body_color: black;
+    --link_color: navy;
+    /* --background: 240 10% 3.9%; */
+    /* --foreground: 0 0% 98%; */
 
     --card: 240 10% 3.9%;
     --card-foreground: 0 0% 98%;
@@ -34,6 +37,18 @@
 
     --radius: 0.5rem;
   }
+}
+[data-theme="dark"] {
+  --body_background: black;
+  --body_color: white;
+  --link_color: white;
+  --transition: 1s;
+}
+[data-theme="light"] {
+  --body_background: white;
+  --body_color: black;
+  --link_color: black;
+  --transition: 1s;
 }
 header {
   font-family: Montserrat;
