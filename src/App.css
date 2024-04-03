@@ -7,8 +7,11 @@
   color: var(--body_color);
   transition: 0.5s;
 }
-.link {
+link {
   color: var(--link_color);
+}
+form {
+  color: white;
 }
 button {
   border-radius: 8px;
@@ -24,12 +27,12 @@ button {
 button:hover {
   border-color: rgb(249 115 22);
 }
-.link {
+link {
   border: 1px solid transparent;
   font-size: 11px;
   transition: border-color 0.25s;
 }
-.link:hover {
+link:hover {
   border-color: rgb(249 115 22);
 }
 button:focus,
@@ -75,15 +78,14 @@ label::after {
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
   transition: 0.3s;
 }
-input {
+.input {
   width: 0;
   height: 0;
-  visibility: hidden;
 }
-input:checked + label {
+.input:checked + label {
   background: #242424;
 }
-input:checked + label::after {
+.input:checked + label::after {
   left: 39px;
   transform: translateX(-100%);
   background: linear-gradient(180deg, #777, #3a3a3a);
@@ -151,9 +153,6 @@ label:active::after {
   font-size: 12px;
 }
 
-input {
-  color: #1a1a1a !important;
-}
 .spinner {
   position: absolute;
   top: 50%;
@@ -217,7 +216,7 @@ hr {
   color: var(--heading-color);
 }
 
-.link {
+.linka {
   cursor: pointer;
   position: relative;
   color: #d8860b;
@@ -229,7 +228,7 @@ hr {
   overflow: hidden;
 }
 
-.link::before {
+.linka::before {
   content: "";
   position: absolute;
   inset: 0;
@@ -243,17 +242,17 @@ hr {
   transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
-.link:hover::before {
+.linka:hover::before {
   scale: 3;
 }
 
-.link:hover {
+.linka:hover {
   color: white;
   scale: 1.1;
   box-shadow: 0 0px 20px rgba(193, 163, 98, 0.4);
 }
 
-.link:active {
+.linka:active {
   scale: 1;
 }
 .avatar {
@@ -273,4 +272,7 @@ h1 {
 }
 p {
   text-shadow: 0px 0px 20px #d8860b;
+}
+.headerr {
+  height: 100%;
 }

@@ -10,7 +10,7 @@ import Header from "./components/Header";
 
 function App() {
   return (
-    <div className="body flex gap-3 p-2">
+    <div className="body flex gap-3 p-2 w-full h-full">
       <Header />
       <Routes>
         <Route path="/" element={<Homepage />} />

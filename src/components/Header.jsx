@@ -15,7 +15,7 @@ const Header = () => {
   };
   return (
     <>
-      <header className="p-5 flex flex-col gap-5 border-2 border-orange-500 text-center">
+      <header className="p-5 flex flex-col gap-5 border-2 border-orange-500 text-center h-full">
         <div className="flex justify-center">
           <Avatar>
             <AvatarImage src="https://github.com/shadcn.png" />
@@ -26,32 +26,32 @@ const Header = () => {
         <div className="links flex flex-col gap-3">
           <NavLink
             to="/"
-            className="link hover:border-orange-500 border-1 rounded-3xl p-1 text-center"
+            className="linka hover:border-orange-500 border-1 rounded-3xl p-1 text-center"
           >
             Home
           </NavLink>
           <NavLink
             to="/card"
-            className="link hover:border-orange-500 border-1 rounded-3xl p-1 text-center"
+            className="linka hover:border-orange-500 border-1 rounded-3xl p-1 text-center"
           >
             Cards
           </NavLink>
           <NavLink
             to="/posts"
-            className="link hover:border-orange-500 border-1 rounded-3xl p-1 text-center"
+            className="linka hover:border-orange-500 border-1 rounded-3xl p-1 text-center"
           >
             Posts
           </NavLink>
           <NavLink
             to="/users"
-            className="link hover:border-orange-500А border-1 rounded-3xl p-1 text-center"
+            className="linka hover:border-orange-500А border-1 rounded-3xl p-1 text-center"
           >
             Users
           </NavLink>
         </div>
         <div className="dark_mode flex justify-center">
           <input
-            className="dark_mode_input"
+            className="dark_mode_input input"
             type="checkbox"
             id="darkmode-toggle"
             onChange={toggleTheme}

@@ -126,7 +126,7 @@ function Card() {
               className="nav flex gap-2 p-3 border-2 rounded-3xl justify-between border-orange-500 "
             >
               <p className="">{res.text}</p>
-              <p>{res.link}</p>
+              <a href={res.link}>{res.link}</a>
               <button
                 onClick={() => {
                   handleDeleteNavLink(res.id);

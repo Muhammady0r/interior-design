@@ -152,10 +152,10 @@ function Posts() {
               key={i}
               className="nav flex gap-2 p-3 border-2 rounded-3xl justify-between border-orange-500"
             >
-              <p>{res.poster}</p>
+              <img src={res.poster} alt="" className="max-w-20 rounded-xl" />
               <p>{res.header}</p>
               <p>{res.description}</p>
-              <p>{res.link}</p>
+              <a href={res.link}>{res.link}</a>
               <button
                 onClick={() => {
                   handleDeletePoster(res.id);
