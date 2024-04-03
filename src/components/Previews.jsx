@@ -1,21 +1,24 @@
 import { getImages } from "@/App";
-import React, { useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Button } from "./ui/button";
-
-// const Previews = () => {
-//   return <></>;
-// };
+import { LangContext } from "./lang";
+import { getText } from "./Funcs";
 
 const Previews = () => {
+  const { lang } = useContext(LangContext);
+  const [texts, setTexts] = useState(getText("reviews"));
+
+  useEffect(() => {
+    setTexts(getText("reviews"));
+  }, [lang]);
+
   return (
     <>
       <div className="flex flex-col container">
-        <h1 className="playd-700 text-6xl max-lg:text-4xl">
-          Reviews from Our Clients
-        </h1>
+        <h1 className="playd-700 text-6xl max-lg:text-4xl">{texts.title}</h1>
         <p className="flex gap-2 items-center poppins-500 text-xl text-secondary">
-          <span className="h-1 w-10 bg-accent rounded-lg"></span> OUR CLIENT
-          SAYS
+          <span className="h-1 w-10 bg-accent rounded-lg"></span>{" "}
+          {texts.client_says}
         </p>
         <div className="mt-2 grid grid-cols-2 justify-center items-center gap-12 max-lg:gap-6 max-lg:grid-cols-1">
           <div className="h-[415px] w-full rounded overflow-hidden max-sm:h-[200px]">
@@ -30,15 +33,13 @@ const Previews = () => {
               Mr. Leonardo
             </h1>
             <h2 className="poppins-500 text-xl text-secondary max-lg:text-base">
-              Remote Programmer
+              {texts.client_job}
             </h2>
             <p
               className="poppins-500 text-2xl my-14 max-xl:my-10 max-lg:my-4 max-lg:text-xl"
               style={{ lineHeight: "190%" }}
             >
-              “Modern desk style featured with tropical stuff with plant and the
-              lighting for a warm, and comforting take on interior design
-              minimalist. I love this design!. Thanks Interiorqu.”{" "}
+              {texts.client_desc}
             </p>
             <div className="flex gap-2">
               <Button className={"w-12 h-12"}>

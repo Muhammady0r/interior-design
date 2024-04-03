@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Card } from "./ui/card";
 import { getImages } from "@/App";
 import { Button, buttonVariants } from "./ui/button";
@@ -6,8 +6,17 @@ import { useQuery } from "react-query";
 import axios from "axios";
 import Loading from "./Loading";
 import { Link } from "react-router-dom";
+import { LangContext } from "./lang";
+import { getText } from "./Funcs";
 
 const Projects = () => {
+  const { lang } = useContext(LangContext);
+  const [texts, setTexts] = useState(getText("projects"));
+
+  useEffect(() => {
+    setTexts(getText("projects"));
+  }, [lang]);
+
   const { data, isLoading } = useQuery(
     "projects",
     () => {
@@ -21,10 +30,10 @@ const Projects = () => {
   return (
     <div className="flex flex-col container">
       <h1 className="playd-700 text-6xl max-lg:text-4xl text-center">
-        The Latest Project
+        {texts.title}
       </h1>
       <p className="flex gap-2 items-center justify-center poppins-500 text-xl text-secondary max-sm:text-base">
-        <span className="h-1 w-10 bg-accent rounded-lg"></span> OUR MINI GALLERY{" "}
+        <span className="h-1 w-10 bg-accent rounded-lg"></span> {texts.gallery}
         <span className="h-1 w-10 bg-accent rounded-lg"></span>
       </p>
       <div className="flex flex-col gap-10 pt-10">
@@ -66,7 +75,7 @@ const Projects = () => {
                     variant: "",
                   })} text-lg max-sm:text-base max-sm:p-5`}
                 >
-                  Read more
+                  {texts.read_more}
                 </Link>
               </div>
             </Card>

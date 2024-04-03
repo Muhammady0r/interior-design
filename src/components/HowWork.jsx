@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext, useEffect, useState } from "react";
 
 import {
   Carousel,
@@ -11,32 +11,33 @@ import {
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 import { getImages } from "@/App";
-
-const cards = [
-  "Planning",
-  "Concept",
-  "Design",
-  "Installation",
-  "Planning",
-  "Concept",
-  "Design",
-  "Installation",
-  "Planning",
-  "Concept",
-  "Design",
-  "Installation",
-  "Planning",
-  "Concept",
-  "Design",
-  "Installation",
-];
+import { getText } from "./Funcs";
+import { LangContext } from "./lang";
 
 const HowWork = () => {
+  const { lang } = useContext(LangContext);
+  const [texts, setTexts] = useState(getText("how_we_work"));
+  const [cards, setCards] = useState([
+    texts.planning,
+    texts.concept,
+    texts.design,
+    texts.installation,
+  ]);
+
+  useEffect(() => {
+    setTexts(getText("how_we_work"));
+  }, [lang]);
+
+  useEffect(() => {
+    setCards([texts.planning, texts.concept, texts.design, texts.installation]);
+  }, [texts]);
+
   return (
     <div className="flex flex-col container">
-      <h1 className="playd-700 text-6xl max-sm:text-4xl">How We Work</h1>
+      <h1 className="playd-700 text-6xl max-sm:text-4xl">{texts.title}</h1>
       <p className="flex gap-2 items-center poppins-500 text-xl text-secondary">
-        <span className="h-1 w-10 bg-accent rounded-lg"></span>OUR WORKFLOW
+        <span className="h-1 w-10 bg-accent rounded-lg"></span>
+        {texts.workflow}
       </p>
       <Carousel className={"mt-10"}>
         <CarouselContent className={"gap-8"}>
