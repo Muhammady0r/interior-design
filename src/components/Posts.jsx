@@ -72,7 +72,7 @@ function Posts() {
     return (
       <>
         <div className="w-100% text-center h-full">
-          <div class="spinner">
+          <div className="spinner">
             <div></div>
             <div></div>
             <div></div>

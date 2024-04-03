@@ -58,7 +58,7 @@ const Header = () => {
           />
           <label
             className="dark_mode_label label"
-            for="darkmode-toggle"
+            htmlFor="darkmode-toggle"
           ></label>
         </div>{" "}
       </header>
