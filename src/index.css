@@ -42,13 +42,14 @@
   --body_background: black;
   --body_color: white;
   --link_color: white;
-  --transition: 1s;
+  transition: 0.5s;
+  --background: 0 0 0;
 }
 [data-theme="light"] {
   --body_background: white;
   --body_color: black;
   --link_color: black;
-  --transition: 1s;
+  transition: 0.5s;
 }
 header {
   font-family: Montserrat;

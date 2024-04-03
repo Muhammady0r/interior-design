@@ -1,9 +1,11 @@
 #root {
   margin: 0 auto;
+  transition: 1s;
 }
 .body {
   background-color: var(--body_background);
   color: var(--body_color);
+  transition: 0.5s;
 }
 .link {
   color: var(--link_color);
@@ -151,4 +153,124 @@ label:active::after {
 
 input {
   color: #1a1a1a !important;
+}
+.spinner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 44px;
+  height: 44px;
+  animation: spinner-y0fdc1 2s infinite ease;
+  transform-style: preserve-3d;
+}
+
+.spinner > div {
+  background-color: rgba(0, 77, 255, 0.2);
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  border: 2px solid #004dff;
+}
+
+.spinner div:nth-of-type(1) {
+  transform: translateZ(-22px) rotateY(180deg);
+}
+
+.spinner div:nth-of-type(2) {
+  transform: rotateY(-270deg) translateX(50%);
+  transform-origin: top right;
+}
+
+.spinner div:nth-of-type(3) {
+  transform: rotateY(270deg) translateX(-50%);
+  transform-origin: center left;
+}
+
+.spinner div:nth-of-type(4) {
+  transform: rotateX(90deg) translateY(-50%);
+  transform-origin: top center;
+}
+
+.spinner div:nth-of-type(5) {
+  transform: rotateX(-90deg) translateY(50%);
+  transform-origin: bottom center;
+}
+
+.spinner div:nth-of-type(6) {
+  transform: translateZ(22px);
+}
+
+@keyframes spinner-y0fdc1 {
+  0% {
+    transform: rotate(45deg) rotateX(-25deg) rotateY(25deg);
+  }
+
+  50% {
+    transform: rotate(45deg) rotateX(-385deg) rotateY(25deg);
+  }
+
+  100% {
+    transform: rotate(45deg) rotateX(-385deg) rotateY(385deg);
+  }
+}
+hr {
+  color: var(--heading-color);
+}
+
+.link {
+  cursor: pointer;
+  position: relative;
+  color: #d8860b;
+  border: 1px solid #d8860b;
+  border-radius: 34px;
+  background-color: transparent;
+  font-weight: 600;
+  transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+  overflow: hidden;
+}
+
+.link::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: 50px;
+  height: 50px;
+  border-radius: inherit;
+  scale: 0;
+  z-index: -1;
+  background-color: #d8860b;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.link:hover::before {
+  scale: 3;
+}
+
+.link:hover {
+  color: white;
+  scale: 1.1;
+  box-shadow: 0 0px 20px rgba(193, 163, 98, 0.4);
+}
+
+.link:active {
+  scale: 1;
+}
+.avatar {
+  box-shadow: 0 0px 20px 1px #d8860b;
+}
+
+.avatar:hover {
+  scale: 1.3;
+  transition: 0.2s;
+}
+
+.label {
+  box-shadow: 0 0px 10px 1px #d8860b;
+}
+h1 {
+  text-shadow: 0px 0px 30px #d8860b;
+}
+p {
+  text-shadow: 0px 0px 20px #d8860b;
 }

@@ -5,7 +5,7 @@ const Notfoundpage = () => {
   return (
     <div className="text-center p-16 w-full">
       <h1>
-        No page with this URL. Go <Link to={"/"}>home</Link>
+        There's nothing here. Go <Link to={"/"}>home</Link>
       </h1>
     </div>
   );

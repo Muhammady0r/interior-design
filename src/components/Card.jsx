@@ -65,7 +65,16 @@ function Card() {
   if (isLoading)
     return (
       <>
-        <h1>Loading...</h1>
+        <div className="w-100% text-center h-full">
+          <div class="spinner">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+        </div>
       </>
     );
 
